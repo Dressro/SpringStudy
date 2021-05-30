@@ -1,6 +1,9 @@
 # SpringStudy
 ## Spring Framework = pojo 형식으로 바뀐 경량 컨테이너
-## 특징 : Open Closed Principle : 개방 폐쇄 정책 (확장은 얼려있고 변경에는 닫힘)
+
+## 특징 
+### OCP : Open Closed Principle : 개방 폐쇄 정책 (확장은 얼려있고 변경에는 닫힘)
+
 ## -IoC : 객체를 생성이랑 사용 하는 곳이 바뀜
 
 ## -DI : <constructor-arg>(생성자) , <property> (setter 주입) , 어노테이션을 활요한 필드 주입
@@ -15,7 +18,7 @@
 ### @AutoWrite -> ref와 같은 성질을 가지고 있음
 ### @Qualifier -> 같은 타입이 존재하는 경우 명확하게 구분해주기 위해 사용 
 
-##AOP : 관점 지향 프로그래밍 -> * 횡단 관점의 분리
+## AOP : 관점 지향 프로그래밍 -> * 횡단 관점의 분리
 
 ### cc (core concern) -> 주 관심사항
 
