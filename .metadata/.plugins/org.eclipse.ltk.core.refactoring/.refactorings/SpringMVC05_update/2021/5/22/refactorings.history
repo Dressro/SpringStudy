@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SpringMVC05_update/순서.txt&apos; to &apos;순서_update.txt&apos;" description="Rename resource &apos;순서.txt&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="순서.txt" name="순서_update.txt" stamp="1622101555420" updateReferences="true"/>
+</session>

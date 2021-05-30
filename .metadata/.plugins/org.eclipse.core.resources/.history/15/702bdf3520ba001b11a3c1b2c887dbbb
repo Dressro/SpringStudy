@@ -1,0 +1,10 @@
+package com.mvc.upgrade.common.aop;
+
+import org.aspectj.lang.JoinPoint;
+
+public class LogAop {
+
+	public void before(JoinPoint join) {
+		
+	}
+}

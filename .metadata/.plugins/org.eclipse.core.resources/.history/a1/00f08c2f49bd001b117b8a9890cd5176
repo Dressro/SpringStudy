@@ -1,0 +1,50 @@
+package com.test.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.test.biz.MyBoardBiz;
+import com.test.dto.MyBoardDto;
+
+@Controller
+public class MyBoardController {
+
+	@Autowired
+	private MyBoardBiz biz;
+
+	@RequestMapping("/list.do")
+	public String selectList(Model model) {
+		model.addAttribute("list", biz.selectList());
+
+		return "myboardlist";
+	}
+
+	@RequestMapping("/insertform.do")
+	public String insertform() {
+		return "myboardinsert";
+	}
+
+	@RequestMapping("/insertres.do")
+	public String insertRes(MyBoardDto dto) {
+		if (biz.insert(dto) > 0) {
+			return "redirect:list.do";
+		}
+		return "redirect:insertform.do";
+	}
+
+	@RequestMapping("/select.do")
+	public String selectOne(Model model, int myno) {
+		model.addAttribute("dto", biz.selectOne(myno));
+
+		return "myboardselect";
+	}
+
+	@RequestMapping("/delete.do")
+	public String delete(int myno) {
+		if (biz.delete(myno) > 0) {
+
+		}
+	}
+}

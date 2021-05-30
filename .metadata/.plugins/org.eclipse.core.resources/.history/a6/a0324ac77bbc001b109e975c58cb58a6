@@ -1,0 +1,13 @@
+package com.mvc.upgrade.model.biz;
+
+import com.mvc.upgrade.model.dto.MemberDto;
+
+public class MemberBizImpl implements MemberBiz {
+
+	@Override
+	public MemberDto login(MemberDto dto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

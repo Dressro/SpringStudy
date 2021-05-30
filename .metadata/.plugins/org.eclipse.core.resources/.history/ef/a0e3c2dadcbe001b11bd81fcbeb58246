@@ -1,0 +1,117 @@
+package com.mvc.update.model.dao;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Repository;
+
+import com.mvc.update.model.dto.JdbcDto;
+
+@Repository
+public class JdbcDaoImpl implements JdbcDao {
+
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+
+	@Override
+	public List<JdbcDto> selectList() {
+		// TODO Auto-generated method stub
+		List<JdbcDto> list = new ArrayList<JdbcDto>();
+
+		String sql = " select seq,writer,title,content,regdate from jdbcboard order by seq desc ";
+
+		try {
+			list = jdbcTemplate.query(sql,
+					// (rs, rowNum) -> {
+					// JdbcDto dto = new JdbcDto(rs.getInt(1), rs.getString(2), rs.getString(3),
+					// rs.getString(4), rs.getDate(5));
+					// return dto;
+					// }
+					new MyMapper());
+		} catch (DataAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return list;
+	}
+
+	@Override
+	public JdbcDto selectOne(int seq) {
+		// TODO Auto-generated method stub
+		JdbcDto dto = new JdbcDto();
+
+		String sql = " select seq,writer,title,content,regdate from jdbcboard where seq = ? ";
+		try {
+			dto = jdbcTemplate.queryForObject(sql, new MyMapper(),new Object[] {seq});
+		} catch (DataAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return dto;
+	}
+
+	@Override
+	public int insert(JdbcDto dto) {
+		// TODO Auto-generated method stub
+		int res = 0;
+
+		String sql = " insert into jdbcboard " + " values (jdbcboardseq.nextval,?,?,?,sysdate) ";
+
+		try {
+			res = jdbcTemplate.update(sql, new Object[] { dto.getWriter(), dto.getTitle(), dto.getContent() });
+		} catch (DataAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return res;
+	}
+
+	@Override
+	public int update(JdbcDto dto) {
+		// TODO Auto-generated method stub
+		int res = 0;
+		String sql = " update jdbcboard set title=? , content=? " + " where seq = ? ";
+		try {
+			res = jdbcTemplate.update(sql, 
+					new Object[] { dto.getTitle(), dto.getContent(), dto.getSeq() },
+					new int[] {Types.VARCHAR,Types.VARCHAR,Types.VARCHAR});
+		} catch (DataAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return res;
+	}
+
+	@Override
+	public int delete(int seq) {
+		// TODO Auto-generated method stub
+		int res = 0;
+		String sql = " delete jdbcboard from seq = ? ";
+		try {
+			res = jdbcTemplate.update(sql, new Object[] { seq });
+		} catch (DataAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return res;
+	}
+
+	// inner class impl RowMapper
+
+	private static final class MyMapper implements RowMapper<JdbcDto> {
+
+		@Override
+		public JdbcDto mapRow(ResultSet rs, int rowNum) throws SQLException {
+			// TODO Auto-generated method stub
+			return new JdbcDto(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getDate(5));
+		}
+
+	}
+}

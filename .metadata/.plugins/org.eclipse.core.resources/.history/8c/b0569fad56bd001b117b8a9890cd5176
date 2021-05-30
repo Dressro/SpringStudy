@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
+
+	<bean id="logAop" class="com.mvc.upgrade.common.aop.LogAop" />
+
+	<aop:config>
+
+		<aop:pointcut id="daoPoint"
+			expression="execution(public * com.mvc.upgrade.model.dao.*Dao*.*(..))" />
+
+
+		<aop:aspect id="logAop" ref="logAop">
+
+			<aop:before pointcut-ref="daoPoint" method="before" />
+
+			<aop:after pointcut-ref="daoPoint" method="after" />
+
+			<aop:after-throwing pointcut-ref="daoPoint"
+				method="afterThrowing" />
+
+		</aop:aspect>
+
+	</aop:config>
+</beans>

@@ -1,0 +1,5 @@
+package com.mvc.upgrade.common.interceptor;
+
+public class LoginInterceptor {
+
+}

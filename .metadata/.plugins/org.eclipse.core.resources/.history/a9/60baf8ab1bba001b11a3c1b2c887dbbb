@@ -1,0 +1,13 @@
+package com.mvc.upgrade.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import com.mvc.upgrade.model.biz.MyBoardBiz;
+
+@Controller
+public class MyBoardController {
+
+	@Autowired
+	private MyBoardBiz biz;
+}

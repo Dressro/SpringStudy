@@ -1,0 +1,25 @@
+package com.test.aop;
+
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.AfterThrowing;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+
+@Aspect
+public class LogAop {
+
+	@Before("execution(public * com.test.dao.*Dao *(..)")
+	public void before() {
+
+	}
+
+	@After("execution(public * com.test.dao.*Dao *(..)")
+	public void after() {
+
+	}
+
+	@AfterThrowing("execution(public * com.test.dao.*Dao *(..)")
+	public void afterThrowing() {
+
+	}
+}

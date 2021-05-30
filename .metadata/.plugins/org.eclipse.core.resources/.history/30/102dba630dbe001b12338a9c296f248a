@@ -1,0 +1,29 @@
+package com.file.updown;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.file.updown.util.FileValidator;
+
+@Controller
+public class HomeController {
+
+	@Autowired
+	private FileValidator fileValidator;
+
+	@RequestMapping("/form")
+	public String uploadForm() {
+		return "upload";
+	}
+
+	@RequestMapping("/upload")
+	public String fileUpload(HttpServletRequest request,Model model,UploadFile uploadFile,BindingResult result) {
+		return null;
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.test.biz;
+
+public interface MyBoardBiz {
+
+}

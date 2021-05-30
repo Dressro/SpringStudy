@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="test"/>
+<aop-project name="SpringMVC05_update_jdbc"/>
+<aop-project name="SpringMVC03_filter_aop_login"/>
+<aop-project name="SpringMVC05_update"/>
+<aop-project name="SpringMVC03_filter_aop_login_Interceptor_transaction_security"/>
+</aop-reference-model>

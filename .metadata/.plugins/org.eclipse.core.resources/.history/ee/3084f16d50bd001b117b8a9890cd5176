@@ -1,0 +1,27 @@
+package com.test.controller;
+
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.test.biz.MemberBiz;
+
+@Controller
+public class MemberController {
+
+	@Autowired
+	private MemberBiz biz;
+	
+	@RequestMapping("/loginform.do")
+	public String LoginForm() {
+		logger.info("[Controller] loginform.do");
+		return "memberlogin";
+	}
+	
+	@RequestMapping("/ajaxlogin.do")
+	public Map<String, Boolean> loginres(){
+		
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;test.sql&apos; to &apos;sqls&apos;&#x0D;&#x0A;- Original project: &apos;SpringMVC03_filter_aop_login_Interceptor_transaction&apos;&#x0D;&#x0A;- Destination element: &apos;sqls&apos;&#x0D;&#x0A;- Original element: &apos;test.sql&apos;" description="Copy file" element1="src/main/webapp/WEB-INF/spring/sqls/test.sql" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1621938991185" target="/test/src/main/webapp/WEB-INF/spring/sqls" units="0" version="1.0"/>
+</session>

@@ -1,0 +1,10 @@
+package com.test.biz;
+
+import com.test.dto.MemberDto;
+
+public interface MemberBiz {
+
+	public MemberDto login(MemberDto dto);
+
+	public int insert(MemberDto dto);
+}

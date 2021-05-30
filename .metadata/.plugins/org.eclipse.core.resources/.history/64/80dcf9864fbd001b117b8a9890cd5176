@@ -1,0 +1,19 @@
+package com.test.biz;
+
+import com.test.dto.MemberDto;
+
+public class MemberBizImpl implements MemberBiz {
+
+	@Override
+	public MemberDto login(MemberDto dto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int insert(MemberDto dto) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

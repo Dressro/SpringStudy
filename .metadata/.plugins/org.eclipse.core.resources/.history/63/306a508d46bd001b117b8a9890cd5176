@@ -1,0 +1,21 @@
+package com.test.dao;
+
+import java.util.List;
+
+import com.test.dto.MyBoardDto;
+
+public interface MyBoardDao {
+
+	String NAMESPACE = "test.";
+	
+	public List<MyBoardDto> selectList();
+	
+	public MyBoardDto selectOne();
+	
+	public int insert(MyBoardDto dto);
+	
+	public int update(MyBoardDto dto);
+	
+	public int delete(int myno);
+	
+}

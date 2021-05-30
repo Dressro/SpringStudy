@@ -1,0 +1,5 @@
+package com.mvc.upgrade.controller;
+
+public class MyBoardController {
+
+}

@@ -1,0 +1,16 @@
+package com.mvc.upgrade.model.dao;
+
+import org.springframework.stereotype.Repository;
+
+import com.mvc.upgrade.model.dto.MemberDto;
+
+@Repository
+public class MemberDaoImpl implements MemberDao {
+
+	@Override
+	public MemberDto login(MemberDto dto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

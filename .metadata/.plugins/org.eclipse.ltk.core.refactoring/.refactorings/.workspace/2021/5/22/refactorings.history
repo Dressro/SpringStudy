@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;SpringMVC03_filter_aop_login_Intersepter&apos; to &apos;SpringMVC03_filter_aop_login_Interceptor&apos;" description="Rename resource &apos;SpringMVC03_filter_aop_login_Intersepter&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/SpringMVC03_filter_aop_login_Intersepter" name="SpringMVC03_filter_aop_login_Interceptor" stamp="1621924709932" updateReferences="true"/>&#x0A;<refactoring comment="Delete resource &apos;ttteest&apos;" deleteContents="true" description="Delete resource &apos;ttteest&apos;" element1="/ttteest" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1622019238101"/>
+</session>

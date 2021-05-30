@@ -1,0 +1,8 @@
+package com.file.updown;
+
+
+@Controller
+public class HomeController {
+
+	
+}

@@ -1,0 +1,16 @@
+package com.test.aop;
+
+public class LogAop {
+
+	public void before() {
+
+	}
+
+	public void after() {
+
+	}
+
+	public void afterThrowing() {
+
+	}
+}
