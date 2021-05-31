@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
+<aop-project name="StartBoot02"/>
+<aop-project name="StartBoot01"/>
+<aop-project name="StartBoot03"/>
+<aop-project name="StartBoot04"/>
 <aop-project name="test"/>
-<aop-project name="SpringMVC05_update_jdbc"/>
-<aop-project name="SpringMVC03_filter_aop_login"/>
-<aop-project name="SpringMVC05_update"/>
-<aop-project name="SpringMVC03_filter_aop_login_Interceptor_transaction_security"/>
 </aop-reference-model>

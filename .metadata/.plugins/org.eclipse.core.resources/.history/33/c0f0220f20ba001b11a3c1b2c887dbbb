@@ -1,5 +1,0 @@
-package com.mvc.upgrade.common.aop;
-
-public class LogAop {
-
-}

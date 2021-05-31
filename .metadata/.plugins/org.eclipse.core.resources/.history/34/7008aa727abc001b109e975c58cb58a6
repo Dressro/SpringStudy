@@ -1,9 +1,0 @@
-package com.mvc.upgrade.model.dto;
-
-public class MemberDto {
-
-	private int memberno;
-	private String memberid;
-	private String memberpw;
-	private String membername;
-}
