@@ -127,3 +127,36 @@ _jdbc
 	db.properties
 8. applicationContext.xml
 9. dto,dao,biz,controller
+	
+## 스프링 부트
+thymeleaf
+<html xmlns:th="http://www.thymeleaf.org">
+-> 스프링 부트에서 thymeleaf를 사용하기 위해서 작성
+
+th:text -> 해당 text 값을 넣어줌
+th:object -> 해당 div 안에서 dto 객체를 가지고 와서 사용 가능
+	*{value} -> c 와 c++ 같이 포인터 * 과 같은 역활
+th:each ="dto:${list}" -> for each문이랑 비슷
+	*{dto.value} -> 해당 dto 값을 가지고 옴
+th:if -> if문과 같은 유형 안의 조건이 참이면 실행
+th:unless -> if문과 같은 유형 안의 조건이 거짓이면 실행
+num:${#numbers.sequence(1,3)} -> num 값안에 1~3을 차례로 넣어줌
+th:href="@{링크}" -> 해당 링크로 이동
+th:switch -> 스위치 문과 비슷
+th:action="@{링크}" -> form 태그에서 action 역활을 맡아서 함 
+
+JPA
+spring.jpa.hibernate.ddl-auto=create(안에 값을 다시 지움) 로 통해서 
+@Entity 
+@Table(name = "MYBOARD")
+를 프로젝트 실행 될 때 마다 자동 생성
+
+findAll -> selectList
+
+findByMyno -> selectOne
+
+save -> insert
+
+saveAndFlush -> update
+
+deleteByMyno -> delete
