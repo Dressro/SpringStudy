@@ -72,40 +72,63 @@ JackSon : Map 을 json 형태로 바꿔줌
 08. applicationContext.xml
 
 _filter
+	
 09. com.mvc.upgrade.common.filter/LogFilter (impl javax.servlet.Filter)
+	
 10. web.xml 에 설정
 
 _aop
+	
 11. pom.xml : aspectjweaver, aspectjrt 추가
+	
 12. com.mvc.upgrade.commom.aop/LogAop
+	
 13. WEB-INF/spring/appServlet/aop-context.xml
+	
 14. web.xml
+	
 15. src/main/resources/log4j.xml
+	
 
 login
+	
 16. pom.xml : jackson-core-asl, jackson-mapper-asl (4 버전 이후 부터는  jsckson-core,jackson-databind)
+	
 17. WEB-INF/spring/sqls/test.sql
+	
 18. dto, dao, biz , controller
+	
 19. src/main/resources/mybatis/member-mapper.xml
+	
 20. WEB-INF/spring/sqls/config.xml
 
 _interceptor
+	
 21. com.mvc.upgrade.common.interceptor / LoginInterceptor (impl HandlerInterceptor)
+	
 22. WEB-INF/spring/appServlet/servlet-context.xml
 
 _transaction
+	
 23. (MyBoard) dao,biz,controller
+	
 24. WEB-INF/spring/appServlet/servlet-context.xml
+	
 25. applicationContext.xml
 
 _security
+	
 26. pom.xml : spring-security-web
+	
 27. WEB-INF/spring/appServlet/security-context.xml
+	
 28. web.xml
+	
 29. (Member) dao, biz , controller
 
 ## 스프링 업데이트 
 1. web.xml : 2.5 -> 4.0
+	
 2. pom.xml
 	java : 1.6 -> 11
 	spring : 3.1.1 -> 5.3.7
@@ -116,16 +139,21 @@ _security
 3. project facets
 	dynamic web module : 2.5 -> 4.0
 	java : 11
+	
 4. maven update
 
 ## 스프링 Mybatis 사용 안하고 게시판 만들기
 _jdbc
 5. pom.xml : spring-jdbc,ojdbc6
+	
 6. web.xml
+	
 7. src/main/resources/sqls
 	jdbc.sql
 	db.properties
+	
 8. applicationContext.xml
+	
 9. dto,dao,biz,controller
 	
 ## 스프링 부트
