@@ -4,9 +4,9 @@
 ## 특징 
 ### OCP : Open Closed Principle : 개방 폐쇄 정책 (확장은 얼려있고 변경에는 닫힘)
 
-## -IoC : 객체를 생성이랑 사용 하는 곳이 바뀜
+### -IoC : 객체를 생성이랑 사용 하는 곳이 바뀜
 
-## -DI : <constructor-arg>(생성자) , <property> (setter 주입) , 어노테이션을 활요한 필드 주입
+### -DI : <constructor-arg>(생성자) , <property> (setter 주입) , 어노테이션을 활요한 필드 주입
 1. byName : setter와 같은 이름이 있으면 자동 할당 (bean에 id 나 name 속성의 이름이 같아야함)
 2. byType : setter와 깉은 타입이 있으면 자동 할당 (bean에 class가 하나만 존재해야함)
 3. constructor : 생성자의 파라미터와 같은 타입이 있으면 자동 할당 (id나 name으로 호출)
@@ -33,11 +33,17 @@ execution(public * *(..)) -> public (모든 리턴 타입) (모든 메소드 장
 @Pointcut -> 타겟 설정
 
 joinpoint : 메인 실행도중 타겟을 호출하는 시점
+	
 target : cc (주 관심사항)
+	
 pointcut : advice/ccc가 연결되는 시점
+	
 proxy : cc에 연결해줄떄 생기는 객체
+	
 advice : ccc 실제 구현 code(공통 관심사항)
+	
 advisor : pointcut + advice
+	
 weaving : 위의 모든 과정을 통틀어서 말함
 
 ## 스프링을 이용하여 게시판 만들기 위한 어노테이션
